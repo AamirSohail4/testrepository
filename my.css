@@ -1,3 +1,7 @@
+* {
+	padding: none;
+	margin: none;
+}
 .contact-info {
 	background-color: #f0faf0;
 	height: 390px;
