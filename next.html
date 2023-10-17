@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hide/Show Text Sibling on Hover with CSS</title>
+    <style>
+        .container {
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+        }
+
+        .text {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .container:hover .text {
+            display: none;
+        }
+
+        .img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .container:hover .img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img class="img" src="image1.jpg">
+        <p class="text">Text 1</p>
+    </div>
+
+    <div class="container">
+        <img class="img" src="image2.jpg">
+        <p class="text">Text 2</p>
+    </div>
+
+    <div class="container">
+        <img class="img" src="image3.jpg">
+        <p class="text">Text 3</p>
+    </div>
+</body>
+
+</html>

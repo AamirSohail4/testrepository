@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./my.css">
+    <!-- <script src='./my.js'></script> -->
+</head>
+
+<body>
+    <div class="contact-info">
+        <div class="phone-info">
+            <div class="whatspa-img" id='element'><img src="./images/cleaning1.webp" alt=""></div>
+            <div class='text'>0301-9858485</div>
+        </div>
+        <div class="phone-info ">
+            <div class="whatspa-img " class='hidden' id='element'><img src="./images/handyman1.webp" alt=""></div>
+            <div class='text' id='byhid'>0301-8958584</div>
+        </div>
+        <div class="phone-info ">
+            <div class="whatspa-img" id='element'><img src="./images/home-inspection.webp" alt=""></div>
+            <div class='text'>chat</div>
+        </div>
+        <div class="parent">
+            <div id="element" class='hidden'>Hover me</div>
+            <div class="sibling-element">Sibling Element</div>
+        </div>
+        <div id="toggle-div">Hover over me to hide</div>
+        <script>
+            // Get a reference to the element
+            const toggleDiv = document.querySelectorAll('.whatspa-img');
+            const mytext = document.querySelectorAll('.text');
+            // console.log(toggleDiv)
+            // console.log(mytext)
+            var mydata = mytext.forEach((data) => {
+
+                toggleDiv.forEach((item) => {
+                    console.log(mydata)
+                    item.addEventListener('mouseover', function () {
+                        // Hide the div when hovered
+                        data.style.display = 'none';
+
+                    });
+                    item.addEventListener('mouseout', function () {
+                        // Hide the div when hovered
+                        data.style.display = 'block';
+                    });
+                })
+
+            })
+            // console.log(mydata);
+
+            // Add a mouseover event listener to the toggleDiv
+            // toggleDiv.addEventListener('mouseover', function () {
+            //     // Hide the div when hovered
+            //     toggleDiv.style.display = 'none';
+            // });
+
+            // Add a mouseout event listener to the toggleDiv
+            // toggleDiv.addEventListener('mouseout', function () {
+            //     // Show the div when the mouse leaves
+            //     toggleDiv.style.display = 'block';
+            // });
+        </script>
+        <button onkeydown="toggleDiv()">Toggle Div</button>
+        <div id="myDiv" class="hidden">
+            This is a hidden div.
+        </div>
+        <!-- <script>
+            // function toggleDiv() {
+            //     var div = document.getElementById('element');
+            //     console.log(div)
+            //     if (div.style.display === 'none') {
+            //         div.style.display = 'block';
+            //     } else {
+            //         div.style.display = 'none';
+            //     }
+            // }
+        </script> --> -->
+    </div>
+    <script>
+        // // Get references to the elements
+        // const myimages = document.querySelectorAll('.whatspa-img');
+        // console.log(myimages)
+        // const mynumber = document.querySelectorAll('.number');
+        // console.log(mynumber)
+        // // Add a mouseover event listener to the parent element
+        // myimages.addEventListener('mouseover', function () {
+        //     // Add a class to the sibling element on hover
+        //     mynumber.classList.add('hovered-sibling');
+        // });
+
+        // // Add a mouseout event listener to the parent element
+        // elementToHover.addEventListener('mouseout', function () {
+        //     // Remove the class from the sibling element when the mouse leaves
+        //     siblingElement.classList.remove('hovered-sibling');
+        // });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+<!-- </html>
+<style>
+   
+</style>
+</head>
+
+<body>
+   

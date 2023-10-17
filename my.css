@@ -1,0 +1,36 @@
+.contact-info {
+	background-color: #f0faf0;
+	height: 390px;
+	width: 53%;
+	position: fixed;
+	right: 0;
+}
+.phone-info {
+	height: 20px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 10px;
+
+	background-color: #4d7998;
+	padding: 18px;
+}
+.whatspa-img {
+	height: 50px;
+	width: 50px;
+}
+.whatspa-img img {
+	width: 100%;
+	position: relative;
+}
+.number {
+	color: white;
+	margin-left: 13px;
+	font-size: 24px;
+}
+/* Define the style for the hovered sibling */
+.hovered-sibling {
+	background-color: rgb(192, 52, 52);
+}
+.mytext {
+	display: none;
+}

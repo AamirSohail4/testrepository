@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hide/Show Text Sibling on Hover with JavaScript</title>
+
+    <style>
+        .contact-info {
+            background-color: #0f1f0f;
+            height: 390px;
+            width: 53%;
+            position: fixed;
+            right: 0;
+            border: 2px solid;
+        }
+
+        .phone-info {
+            height: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+
+            background-color: #4d7998;
+            padding: 18px;
+        }
+
+        .whatimg {
+            height: 50px;
+            width: 50px;
+        }
+
+        .whatimg img {
+            width: 100%;
+            position: relative;
+        }
+
+        .text {
+            color: white;
+            margin-left: 13px;
+            font-size: 24px;
+        }
+
+        /* Define the style for the hovered sibling */
+        .hovered-sibling {
+            background-color: rgb(192, 52, 52);
+        }
+
+        .mytext {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="container">
+
+        <img class="img" src="image1.jpg">
+        <p class="text">Text 1</p>
+    </div>
+
+    <div class="container">
+
+        <img class="img" src="image2.jpg">
+        <p class="text">Text 1</p>
+    </div>
+
+    <div class="container">
+
+        <img class="img" src="image3.jpg">
+        <p class="text">Text 1</p>
+    </div> -->
+    <div class='contact-info'>
+        <div class='phone-info'>
+            <div class="whatimg "><img src="./images/cleaning1.webp" alt=""></div>
+            <p class="text">0301-9858485</span>
+        </div>
+        <div class='phone-info'>
+            <div class="whatimg "><img src="./images/handyman1.webp" alt=""></div>
+            <p class=" text">0301-9858485</span>
+        </div>
+        <div class='phone-info'>
+            <div class="whatimg "><img src="./images/home-inspection.webp" alt=""></div>
+            <p class="text">chat</p>
+        </div>
+
+
+    </div>
+    </div>
+
+    <script>
+        const imgElements = document.querySelectorAll('.whatimg ');
+        console.log(imgElements)
+
+        imgElements.forEach(img => {
+            img.addEventListener('mouseenter', () => {
+                const textElement = img.nextElementSibling;
+                if (textElement) {
+                    textElement.style.display = 'none';
+                }
+            });
+
+            img.addEventListener('mouseleave', () => {
+                const textElement = img.nextElementSibling;
+                if (textElement) {
+                    textElement.style.display = 'block'; // You can adjust this to the appropriate display property
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
